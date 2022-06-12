@@ -1,0 +1,25 @@
+.panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  font-size: 1rem;
+
+  &__filter {
+    display: flex;
+  }
+
+  &__btn {
+    background-color: transparent;
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    padding: 0;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      color: var(--color-btn);
+    }
+  }
+}

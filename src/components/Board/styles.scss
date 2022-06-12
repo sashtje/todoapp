@@ -1,0 +1,30 @@
+.board {
+  position: relative;
+  background-color: #ffffff;
+  border: var(--border);
+  box-shadow: 0 0 5px var(--color-shadow);
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: '';
+    border: var(--border);
+    background-color: #f3f3f3;
+    box-shadow: 0 0 5px var(--color-shadow);
+    z-index: -1;
+  }
+
+  &::before {
+    bottom: -15px;
+    left: 10px;
+    width: calc(100% - 20px);
+    height: 16px;
+  }
+
+  &::after {
+    bottom: -7px;
+    left: 5px;
+    width: calc(100% - 10px);
+    height: 8px;
+  }
+}

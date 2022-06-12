@@ -1,0 +1,46 @@
+.input {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+
+  &__icon {
+    width: 30px;
+    height: 30px;
+    font-size: 2rem;
+    color: var(--color-completed);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+      display: block;
+    }
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    font-family: inherit;
+    font-size: 1.5rem;
+    padding: 20px 10px;
+    border: none;
+    outline: none;
+
+    &::-webkit-input-placeholder {
+      color: var(--color-completed);
+      font-style: italic;
+    }
+    &::-moz-placeholder {
+      color: var(--color-completed);
+      font-style: italic;
+    } /* Firefox 19+ */
+    &:-moz-placeholder {
+      color: var(--color-completed);
+      font-style: italic;
+    } /* Firefox 18- */
+    &:-ms-input-placeholder {
+      color: var(--color-completed);
+      font-style: italic;
+    }
+  }
+}

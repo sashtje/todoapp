@@ -1,0 +1,13 @@
+.todos {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-bottom: var(--border);
+  box-shadow: 0 -1px 3px var(--color-shadow);
+}
+
+ul {
+  position: relative;
+  z-index: 1;
+}
