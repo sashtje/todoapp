@@ -1,5 +1,7 @@
 # todoapp
 
+### [Deploy](sashtje.github.io/todoapp/)
+
 ## Тестовое задание Frontend intern в Mindbox
 
 Сделайте ToDo-приложение, позволяющее управлять текущим списком дел.
