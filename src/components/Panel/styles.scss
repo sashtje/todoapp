@@ -4,6 +4,8 @@
   align-items: center;
   padding: 10px 20px;
   font-size: 1rem;
+  color: #757575;
+  font-weight: 300;
 
   @media (max-width: 541px) {
     display: block;
@@ -29,6 +31,7 @@
     border: none;
     font-family: inherit;
     font-size: inherit;
+    color: inherit;
     padding: 0;
     cursor: pointer;
     transition: 0.3s;

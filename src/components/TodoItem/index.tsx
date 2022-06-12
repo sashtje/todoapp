@@ -20,7 +20,9 @@ const TodoItem = ({ todo }: { todo: Todo }) => {
         )}
       </span>
 
-      <span className="todo__title">{todo.title}</span>
+      <span className={todo.isActive ? 'todo__title' : 'todo__title todo__title_is_not-active'}>
+        {todo.title}
+      </span>
     </Reorder.Item>
   );
 };

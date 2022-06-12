@@ -8,7 +8,7 @@ const Panel = () => {
       <div>{10002} items left</div>
 
       <div className="panel__filter">
-        <FilterButton>All</FilterButton>
+        <FilterButton isActive={true}>All</FilterButton>
         <FilterButton>Active</FilterButton>
         <FilterButton>Completed</FilterButton>
       </div>

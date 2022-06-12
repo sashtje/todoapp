@@ -42,5 +42,10 @@
     @media (max-width: 541px) {
       font-size: 1.2rem;
     }
+
+    &_is_not-active {
+      color: var(--color-completed);
+      text-decoration: line-through;
+    }
   }
 }
