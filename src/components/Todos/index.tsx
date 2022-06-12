@@ -1,28 +1,46 @@
-import { useState } from 'react';
 import { Reorder } from 'framer-motion';
-import { v4 as uuidv4 } from 'uuid';
 
 import TodoItem from '../TodoItem';
+import TodoContent from '../TodoItem/TodoContent';
 
-import { Todo } from '../../types';
+import { useAppSelector } from '../../hooks/redux';
+import { useAppDispatch } from './../../hooks/redux';
+import { setTodos } from '../../store/reducers/todoSlice';
+
+import { Filter, Todo } from '../../types';
 
 import './styles.scss';
 
-const defaultTodos: Todo[] = [
-  { id: uuidv4(), title: 'Тестовое задание', isActive: true },
-  { id: uuidv4(), title: 'Прекрасный код', isActive: false },
-  { id: uuidv4(), title: 'Покрытие тестами', isActive: true },
-];
-
 const Todos = () => {
-  const [todos, setTodos] = useState<Todo[]>(defaultTodos);
+  const { todos, filter } = useAppSelector((state) => state);
+  const dispatch = useAppDispatch();
+
+  const handleReorder = (todos: Todo[]) => {
+    dispatch(setTodos(todos));
+  };
 
   return (
-    <Reorder.Group axis="y" values={todos} onReorder={setTodos} className="todos">
-      {todos.map((todo) => (
-        <TodoItem key={todo.id} todo={todo} />
-      ))}
-    </Reorder.Group>
+    <>
+      {filter === Filter.All ? (
+        <Reorder.Group axis="y" values={todos} onReorder={handleReorder} className="todos">
+          {todos.map((todo) => (
+            <TodoItem key={todo.id} todo={todo} />
+          ))}
+        </Reorder.Group>
+      ) : (
+        <div className="todos">
+          {todos
+            .filter((item) =>
+              filter === Filter.Active ? item.isActive === true : item.isActive === false
+            )
+            .map((todo) => (
+              <div key={todo.id} className="todo">
+                <TodoContent todo={todo} />
+              </div>
+            ))}
+        </div>
+      )}
+    </>
   );
 };
 

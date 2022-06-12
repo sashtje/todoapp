@@ -1,5 +1,7 @@
 import { useMotionValue, Reorder } from 'framer-motion';
-import { RiCheckLine } from 'react-icons/ri';
+
+import TodoContent from './TodoContent';
+
 import { useRaisedShadow } from '../../hooks/used-raised-shadow';
 
 import { Todo } from '../../types';
@@ -12,17 +14,7 @@ const TodoItem = ({ todo }: { todo: Todo }) => {
 
   return (
     <Reorder.Item value={todo} className="todo" style={{ boxShadow, y }}>
-      <span className="todo__radio">
-        {!todo.isActive && (
-          <span className="todo__check-mark">
-            <RiCheckLine />
-          </span>
-        )}
-      </span>
-
-      <span className={todo.isActive ? 'todo__title' : 'todo__title todo__title_is_not-active'}>
-        {todo.title}
-      </span>
+      <TodoContent todo={todo} />
     </Reorder.Item>
   );
 };
