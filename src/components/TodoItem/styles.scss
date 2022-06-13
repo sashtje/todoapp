@@ -1,0 +1,51 @@
+.todo {
+  position: relative;
+  cursor: grab;
+  padding: 20px 10px;
+  background-color: #ffffff;
+  border-top: var(--border);
+  display: flex;
+  align-items: center;
+
+  &__radio {
+    flex: 0 0 30px;
+    display: block;
+    height: 30px;
+    border: var(--border);
+    border-radius: 50%;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      border-color: #049004;
+    }
+  }
+
+  &__check-mark {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: #049004;
+
+    svg {
+      display: block;
+    }
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    line-height: 1.4;
+
+    @media (max-width: 541px) {
+      font-size: 1.2rem;
+    }
+
+    &_is_not-active {
+      color: var(--color-completed);
+      text-decoration: line-through;
+    }
+  }
+}

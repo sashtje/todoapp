@@ -1,0 +1,31 @@
+:root {
+  box-sizing: border-box;
+  font-size: 16px;
+
+  --color-completed: rgba(170, 168, 168);
+  --color-title: #e2c4c4;
+  --color-shadow: rgba(170, 168, 168, 0.5);
+  --color-btn: #b46969;
+
+  --border: 1px solid rgb(205, 205, 205);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  min-height: 100vh;
+  background: -webkit-linear-gradient(202deg, #f9f9f9, #e6e6e6); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    202deg,
+    #f9f9f9,
+    #e6e6e6
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}

@@ -1,0 +1,20 @@
+.filter-btn {
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  padding: 5px;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover {
+    color: var(--color-btn);
+  }
+
+  &_is_active {
+    border-color: var(--color-btn);
+  }
+}
