@@ -1,6 +1,6 @@
 # todoapp
 
-### [Deploy](sashtje.github.io/todoapp/)
+### [Deploy](https://sashtje.github.io/todoapp/)
 
 ## Тестовое задание Frontend intern в Mindbox
 
