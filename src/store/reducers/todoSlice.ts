@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 import { AppState, Filter, Todo } from '../../types';
 
-const initialState: AppState = {
+export const initialState: AppState = {
   todos: [
     { id: uuidv4(), title: 'Тестовое задание', isActive: true },
     { id: uuidv4(), title: 'Прекрасный код', isActive: false },
@@ -25,10 +25,8 @@ export const todoSlice = createSlice({
     },
 
     changeActive(state, action: PayloadAction<string>) {
-      const todo = state.todos.find((item) => item.id === action.payload);
-      if (todo) {
-        todo.isActive = !todo.isActive;
-      }
+      const todo = state.todos.find((item) => item.id === action.payload) as Todo;
+      todo.isActive = !todo.isActive;
     },
 
     setFilter(state, action: PayloadAction<Filter>) {

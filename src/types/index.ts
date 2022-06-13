@@ -1,3 +1,5 @@
+import { AppStore } from '../store';
+
 export interface Todo {
   id: string;
   title: string;
@@ -13,4 +15,9 @@ export enum Filter {
 export interface AppState {
   todos: Todo[];
   filter: Filter;
+}
+
+export interface RenderOptions {
+  preloadedState?: AppState;
+  store?: AppStore;
 }

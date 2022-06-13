@@ -17,9 +17,10 @@ const Input = () => {
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
 
-    const todoText = (inputRef.current as HTMLInputElement).value;
+    const todoText = (inputRef.current as HTMLInputElement).value.trim();
 
     if (todoText === '') {
+      (inputRef.current as HTMLInputElement).value = '';
       return;
     }
 
